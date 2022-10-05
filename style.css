@@ -43,6 +43,7 @@ body {
 }
 .days_li li div:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .bottom {
