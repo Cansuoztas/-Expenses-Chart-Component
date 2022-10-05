@@ -1,29 +1,25 @@
-const days = document.querySelectorAll(".days");
-let ab;
-const data = async () => {
-  const res = await fetch("data.json");
-  console.log(res);
-  const data = await res.json();
-  console.log(data);
+const myDay = document.querySelectorAll(".days_li li");
+const data = async() => {
+    const res = await fetch("data.json")
+    console.log(res);
+    const data = await res.json()
+    console.log(data);
+   
 
-  data.map(({ day, amount }) => {
-    console.log(`${day}, ${amount}`);
-     ab = `${amount}`;
- 
+      const {day, amount} = data;
+      data.map(({day, amount},i)=>{
+        console.log(`${day} ${amount} ${i}`)
+       console.log( `myDay[${i}]`);
 
+//    console.log(myDay[i].firstElementChild);
+console.log(myDay[i].firstElementChild.style.height =`${(amount*2).toFixed(0)}px`)
+myDay[i].firstElementChild.style.backgroundColor ="hsl(10, 79%, 65%)";
 
-    
+       
 
-    
-  });
-
-
-  for (let i = 0; i < 7; i++) {
-       console.log(ab);
-    console.log(i);
-    return (days[i].style.height = `${ab * 2}px `);
-  }
-  
-};
+      
+      })
+      
+}
 
 console.log(data());

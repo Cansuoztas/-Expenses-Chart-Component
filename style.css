@@ -31,7 +31,9 @@ body {
 
 .days_li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  align-items: flex-end;
 }
 
 .days_li li {
@@ -39,6 +41,10 @@ body {
   margin-top: 12rem;
   padding: 1rem;
 }
+.days_li li div:hover {
+  opacity: 0.5;
+}
+
 .bottom {
   padding: 1.5rem 2rem;
   border-radius: 20px;
@@ -47,6 +53,10 @@ body {
 
 .days_li span {
   color: rgba(0, 0, 0, 0.431);
+}
+
+#wed {
+  background-color: hsl(186, 34%, 60%) !important;
 }
 
 .total {
@@ -74,7 +84,7 @@ body {
 }
 
 .spin:hover {
-    cursor: pointer;
+  cursor: pointer;
   animation: spin 2s ease-in-out infinite;
 }
 
@@ -85,10 +95,3 @@ body {
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-.days{
-    background-color: aqua;
-    width: 2rem;
-}
